@@ -1,0 +1,13 @@
+POST http://localhost:8069/oauth/authorize?client_id=e3a73cc7-8d08-4a1a-89ac-3534102efb96&response_type=code&redirect_uri=http://localhost:8069&scope=profile
+
+###
+
+# Get token
+
+POST http://localhost:8079/rest/v1/auth/get_tokens?username=sync&password=sync
+
+###
+
+# Test res.partner result
+GET http://farmdirect.localhost:8079/api/res.partner
+Access-Token: 0994e022a3fe9a46d6291c7df87be2e3d2d9a3fd
