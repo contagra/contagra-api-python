@@ -74,8 +74,8 @@ class API(object):
         auth = None
 
         headers = {
-            "user-agent": f"{self.user_agent}",
-            "accept": "application/json",
+            "User-Agent": f"{self.user_agent}",
+            "Accept": "application/json",
             "Access-Token": token
         }
 
@@ -84,7 +84,7 @@ class API(object):
 
         if data is not None:
             data = jsonencode(data, ensure_ascii=False).encode('utf-8')
-            headers["content-type"] = "application/json;charset=utf-8"
+            headers["Content-Type"] = "text/html; charset=utf-8"
 
         return request(
             method=method,
